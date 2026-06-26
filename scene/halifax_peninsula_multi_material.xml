@@ -1,0 +1,83 @@
+<scene version="2.1.0">
+
+<!-- Camera and rendering parameters -->
+
+    <integrator type="path" id="integrator" name="integrator"/>
+
+<!-- Materials -->
+
+    <bsdf type="diffuse" id="mat-itu_brick" name="mat-itu_brick">
+        <rgb value="0.401968 0.111874 0.086764" name="reflectance"/>
+    </bsdf>
+
+    <bsdf type="diffuse" id="mat-itu_concrete" name="mat-itu_concrete">
+        <rgb value="0.539479 0.539479 0.539480" name="reflectance"/>
+    </bsdf>
+
+    <bsdf type="diffuse" id="mat-itu_medium_dry_ground" name="mat-itu_medium_dry_ground">
+        <rgb value="0.420000 0.440000 0.390000" name="reflectance"/>
+    </bsdf>
+
+    <bsdf type="diffuse" id="mat-itu_metal" name="mat-itu_metal">
+        <rgb value="0.620000 0.650000 0.660000" name="reflectance"/>
+    </bsdf>
+
+    <bsdf type="diffuse" id="mat-itu_wood" name="mat-itu_wood">
+        <rgb value="0.090000 0.090000 0.085000" name="reflectance"/>
+    </bsdf>
+
+<!-- Emitters -->
+
+    <emitter type="constant" id="light" name="light"/>
+
+<!-- Shapes -->
+
+    <shape type="ply" id="mesh_terrain" name="mesh_terrain">
+        <string name="filename" value="../meshes/terrain.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_medium_dry_ground" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_roof_asphalt" name="mesh_buildings_roof_asphalt">
+        <string name="filename" value="../meshes/buildings_roof_asphalt.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_wood" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_roof_concrete" name="mesh_buildings_roof_concrete">
+        <string name="filename" value="../meshes/buildings_roof_concrete.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_concrete" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_roof_metal" name="mesh_buildings_roof_metal">
+        <string name="filename" value="../meshes/buildings_roof_metal.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_metal" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_wall_brick" name="mesh_buildings_wall_brick">
+        <string name="filename" value="../meshes/buildings_wall_brick.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_brick" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_wall_concrete" name="mesh_buildings_wall_concrete">
+        <string name="filename" value="../meshes/buildings_wall_concrete.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_concrete" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_wall_metal" name="mesh_buildings_wall_metal">
+        <string name="filename" value="../meshes/buildings_wall_metal.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_metal" name="bsdf"/>
+    </shape>
+
+    <shape type="ply" id="mesh_buildings_wall_wood" name="mesh_buildings_wall_wood">
+        <string name="filename" value="../meshes/buildings_wall_wood.ply"/>
+        <boolean name="face_normals" value="true"/>
+        <ref id="mat-itu_wood" name="bsdf"/>
+    </shape>
+
+</scene>
