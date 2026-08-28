@@ -116,6 +116,11 @@ python scripts/sionna/build_scene_xml.py
 Large raw source files and regenerated intermediate products should remain under
 `data/`; they are intentionally ignored by Git.
 
+## Acknowledgements
+
+The authors gratefully acknowledge Noah Jehanno and Nathan Chappe for their 
+contributions to the map-generation activities that supported this work.
+
 ## License
 
 This repository is released under the MIT License. The original public
